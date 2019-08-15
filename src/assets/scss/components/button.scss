@@ -1,0 +1,32 @@
+@each $name, $colour in $maincolours {
+  .button {
+      &.#{$name}-background {
+        border: 2px solid $colour;
+        &:hover, &:active, &:focus {
+          background-color: lighten($colour, 25);
+          color: $colour;
+      }
+    }
+  }
+}
+
+.button, input[type="button"] {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding: 0.75rem 1.25rem;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  border-radius: $radius;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.button-container .button {
+  font-size: 2.5em;
+  width: 75px;
+  height: 45px;
+  padding: 0;
+  line-height: 1;
+}

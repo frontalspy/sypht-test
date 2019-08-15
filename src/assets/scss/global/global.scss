@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@each $name, $colour in $maincolours {
+  .#{$name}-colour {
+    color: $colour;
+  }
+  .#{$name}-background {
+    background-color: $colour;
+  }
+}
+
+.hide {
+  display: none;
+}
